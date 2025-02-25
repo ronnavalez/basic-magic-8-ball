@@ -1,1 +1,27 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Magic 8 Ball</title>
+    <link rel="stylesheet" href="styles.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1>Let the Ball decide your future 🤩</h1>
+    
+    <!-- Black Ball (Outer Circle) -->
+    <div id="ball">
+        <!-- White Ball (Inner Circle) -->
+        <div id="inputContainer">
+            <textarea id="userInput" placeholder="Ask me anything.. 😊"></textarea><br>
+            <button id="askButton" type="submit" value="submit">Submit!</button><br>
+        </div>
+        <div id="answerDisplay">
+            <p id="ballResponse"></p>
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
