@@ -1,1 +1,113 @@
+body {
+    background-color: purple;
+    text-align: center;
+}
 
+h1 {
+    font-family: 'Cinzel Decorative', serif;
+    font-size: 24px;
+    font-weight: bold;
+    color: navajowhite;
+}
+
+#answerDisplay {
+    font-family: 'Cinzel Decorative', serif;
+    font-size: 24px;
+    font-weight: bold;
+    color: navajowhite;
+}
+
+textarea {
+    margin: 10px 0;
+    width: 80%; /* Adjusted width */
+    height: 50px;
+    resize: none;
+    background-color: rgb(216, 221, 169);
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 10px;
+    border-style: none;
+}
+
+button {
+    background-color: violet;
+    border-radius: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 50px;
+    color: yellow;
+    width: 100px;
+    font-size: 100%;
+    border-style: none;
+}
+
+button:hover {
+    background-color: rgb(95, 27, 124);
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+/* Black Ball */
+#ball {
+    border-radius: 50%;
+    background-color: black;
+    width: 800px; /* Set a specific width */
+    height: 800px; /* Set a specific height */
+    margin: 0 auto; /* To center it */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* White Ball (Inside the Black Ball) */
+#inputContainer {
+    border-radius: 50%;
+    background-color: white;
+    width: 400px;
+    height: 400px;
+    display: flex;
+    flex-direction: column; /* Arrange children vertically */
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+    text-align: center;
+    margin-top: -300px;
+    padding: 20px;
+}
+
+/* Adjust text area and button size */
+textarea {
+    width: 70%;
+    margin-bottom: 0px;
+    border-style: none;
+    margin-top: -150px;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 20px; /* Smaller title font on mobile */
+    }
+
+    textarea {
+        width: 80%;
+        font-size: 16px; /* Smaller font for text area */
+    }
+
+    button {
+        width: 80%;
+        font-size: 18px; /* Adjust button size on mobile */
+    }
+
+    #ball {
+        width: 90vw; /* Make ball slightly smaller on mobile */
+        height: 90vw;
+    }
+
+    #inputContainer {
+        width: 80%; /* Slightly smaller white ball on mobile */
+        height: 80%;
+    }
+
+    #answerDisplay {
+        width: 90%; /* Make the answer display a little smaller on mobile */
+        font-size: 14px; /* Smaller font for answers */
+    }
+}
