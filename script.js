@@ -30,6 +30,8 @@ submitButton.addEventListener("click", function(){
         response.innerHTML = ballResponse[randomResponse];
         clear.style.display = "block";
     }
+
+    response.style.fontSize = "30px";
     
     response.classList.add("fade-in");
 
