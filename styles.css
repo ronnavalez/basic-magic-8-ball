@@ -1,6 +1,8 @@
 body {
     background-color: purple;
     text-align: center;
+    margin: 0;
+    padding: 0;
 }
 
 h1 {
@@ -8,24 +10,32 @@ h1 {
     font-size: 24px;
     font-weight: bold;
     color: navajowhite;
+    margin-bottom: 20px;
 }
 
 #answerDisplay {
     font-family: 'Cinzel Decorative', serif;
-    font-size: 24px;
+    font-size: 20px;
     font-weight: bold;
     color: navajowhite;
+    margin-top: 20px;
+    position: absolute;
+    border-radius: 20px;
+    background-color: purple;
+    width: 80%; /* Adjust for smaller screens */
+    padding: 10px;
 }
 
 textarea {
     margin: 10px 0;
-    width: 80%; /* Adjusted width */
+    width: 70%; /* Adjusted width */
     height: 50px;
     resize: none;
     background-color: rgb(216, 221, 169);
     font-family: Arial, Helvetica, sans-serif;
     border-radius: 10px;
     border-style: none;
+    font-size: 18px; /* Slightly smaller font for smaller screens */
 }
 
 button {
@@ -37,6 +47,7 @@ button {
     width: 100px;
     font-size: 100%;
     border-style: none;
+    margin-top: 10px;
 }
 
 button:hover {
@@ -49,8 +60,10 @@ button:hover {
 #ball {
     border-radius: 50%;
     background-color: black;
-    width: 800px; /* Set a specific width */
-    height: 800px; /* Set a specific height */
+    width: 70vw; /* Use viewport width to make it responsive */
+    height: 70vw; /* Same as width to keep it circular */
+    max-width: 800px; /* Prevent it from getting too large */
+    max-height: 800px;
     margin: 0 auto; /* To center it */
     display: flex;
     justify-content: center;
@@ -61,23 +74,37 @@ button:hover {
 #inputContainer {
     border-radius: 50%;
     background-color: white;
-    width: 400px;
-    height: 400px;
+    width: 60%; /* Adjusted width for smaller screens */
+    height: 60%; /* Adjusted height for smaller screens */
     display: flex;
-    flex-direction: column; /* Arrange children vertically */
-    justify-content: center; /* Center vertically */
-    align-items: center; /* Center horizontally */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    margin-top: -300px;
     padding: 20px;
+    position: relative; /* To make positioning of answerDisplay easier */
 }
 
-/* Adjust text area and button size */
 textarea {
     width: 70%;
     margin-bottom: 0px;
     border-style: none;
-    margin-top: -150px;
+    font-size: 18px;
+}
+
+#answerDisplay {
+    position: absolute;
+    bottom: 20px; /* Position at the bottom of the white ball */
+    left: 50%;
+    transform: translateX(-50%); /* Center it horizontally */
+    border-radius: 20px;
+    background-color: purple;
+    width: 80%;
+    font-size: 16px;
+}
+
+#clearButton{
+    display: none;
 }
 
 /* Mobile Adjustments */
@@ -110,4 +137,14 @@ textarea {
         width: 90%; /* Make the answer display a little smaller on mobile */
         font-size: 14px; /* Smaller font for answers */
     }
+}
+
+/* Add this to your CSS */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.fade-in {
+    animation: fadeIn 1s ease-in-out;
 }
